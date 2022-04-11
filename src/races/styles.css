@@ -1,0 +1,71 @@
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 5px 8px;
+}
+
+header {
+  border-bottom: 1px solid #ccc;
+}
+
+h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 12px;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+h2 + h3 {
+  margin-top: -0.75rem;
+}
+
+.races {
+  display: flex;
+}
+
+.series {
+  flex-wrap: wrap;
+  padding-left: 1rem;
+}
+
+.series-event {
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+.series-event.registered {
+  background-color: lightgreen;
+}
+
+ul, li{
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+form {
+  white-space: nowrap;
+}
+
+select, button {
+  font-size: 12px;
+}
+
+select + button {
+  margin-left: 1rem;
+}
+.time-ago {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 5px;
+}
