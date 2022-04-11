@@ -80,8 +80,10 @@ export async function fetchRegistrations(raceIds: number[]){
     return regs[key];
   }
   const user = await fetchCurrentUser();
-  return post<Registration[]>('/races/checkData', {
+  regs[key] = await post<Registration[]>('/races/checkData', {
     races: raceIds,
     user,
   });
+
+  return regs[key];
 }
