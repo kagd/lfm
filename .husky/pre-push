@@ -4,3 +4,4 @@
 npm run build
 git add .
 git commit -m 'transpile'
+git push --no-verify
