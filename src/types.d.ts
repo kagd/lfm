@@ -1,3 +1,6 @@
+declare type LooksLikeObject = {
+  [key: string]: any;
+}
 
 declare type User = {
   id: number;
@@ -358,4 +361,32 @@ declare type Registration = {
   split: number;
   success: boolean;
   slots: number;
+}
+
+declare type PastEvent = {
+  race_id: number;
+  track_name: string;
+  race_date: string; // date
+  event_name: string;
+  car_name: string;
+  split: number;
+  race_start_elo: number;
+  race_start_sr: string;
+  start_pos: number;
+  finishing_pos: number;
+  rating_change: number;
+  points: number;
+  sr_change: number;
+  best_of_week: boolean;
+  incidents: number;
+  sof: number;
+  split2_sof: number;
+  split3_sof: number;
+  split4_sof: number;
+  split5_sof: number;
+  split6_sof: number;
+  split7_sof: number;
+  split8_sof: number;
+  split9_sof: number;
+  split10_sof: number;
 }

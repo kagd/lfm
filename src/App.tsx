@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import {HashRouter, Link, Routes, Route} from 'react-router-dom';
 import { Races } from './races/Races';
-import { Profile } from './Profile';
+import { Profile } from './profile/Profile';
 
 export function App() {
 

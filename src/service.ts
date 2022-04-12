@@ -9,10 +9,6 @@ function getHeaders(){
     'Content-Type': 'appplication/json'
   }
 }
-
-interface LooksLikeObject {
-  [key: string]: any;
-}
   
 async function get<T>(url: string): Promise<T> {
   const response = await fetch(`${baseUrl}${url}`, {
@@ -86,4 +82,9 @@ export async function fetchRegistrations(raceIds: number[]){
   });
 
   return regs[key];
+}
+
+export async function fetchPastRaces(){
+  const user = await fetchCurrentUser();
+  return get<PastEvent[]>(`/users/getUsersPastRaces/${user.id}?start=0&limit=20`);
 }
