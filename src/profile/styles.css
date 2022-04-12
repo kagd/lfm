@@ -2,3 +2,7 @@ table th, table td {
   text-align: left;
   padding: 3px 8px;
 }
+
+table em {
+  font-size: 12px;
+}

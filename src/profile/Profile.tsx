@@ -23,6 +23,20 @@ export function Profile(props: ProfileProps) {
     return <>Loading...</>
   }
 
+  function renderEvent(user: User, events: PastEvent[]){
+    const combined = events.reduce(function(memo, event){
+      const components = [...memo.components];
+      components.push(<PastEvent event={event} userId={user.id} rating={memo.rating} safteyRating={memo.sr} />);
+      return {
+        rating: memo.rating - event.rating_change,
+        sr: parseFloat((memo.sr - event.sr_change).toFixed(2)),
+        components,
+      };
+    }, {rating: parseFloat(user.cc_rating), sr: user.safety_rating, components: []} as {rating: number, sr: number, components: JSX.Element[]});
+
+    return combined.components;
+  }
+
   return (
     <div>
       <h2>{user.vorname} {user.nachname}</h2>
@@ -46,7 +60,7 @@ export function Profile(props: ProfileProps) {
           </tr>
         </thead>
         <tbody>
-          {pastEvents.map(event => <PastEvent event={event} userId={user.id} />)}
+          {renderEvent(user, pastEvents)}
         </tbody>
       </table>
     </div>

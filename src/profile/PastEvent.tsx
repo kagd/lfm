@@ -3,6 +3,8 @@ import React from 'react';
 interface PastEventProps {
   event: PastEvent;
   userId: number;
+  rating: number;
+  safteyRating: number;
 }
 
 export function PastEvent(props: PastEventProps) {
@@ -20,9 +22,9 @@ export function PastEvent(props: PastEventProps) {
       <td>{props.event.start_pos}</td>
       <td>{props.event.finishing_pos}</td>
       <td>{sof}</td>
-      <td>{props.event.rating_change}</td>
+      <td>{props.event.rating_change} <em>({props.rating})</em></td>
       <td>{props.event.incidents}</td>
-      <td>{props.event.sr_change}</td>
+      <td>{props.event.sr_change} <em>({props.safteyRating})</em></td>
       <td>{props.event.points}</td>
     </tr>
   );

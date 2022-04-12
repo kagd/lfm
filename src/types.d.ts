@@ -20,7 +20,7 @@ declare type User = {
   profile_extras: null;
   origin: string;
   c_rating: number;
-  cc_rating: number;
+  cc_rating: string;
   twitch_channel: string;
   is_tv_broadcaster: number;
   youtube_channel: string;

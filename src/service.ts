@@ -86,5 +86,5 @@ export async function fetchRegistrations(raceIds: number[]){
 
 export async function fetchPastRaces(){
   const user = await fetchCurrentUser();
-  return get<PastEvent[]>(`/users/getUsersPastRaces/${user.id}?start=0&limit=20`);
+  return get<PastEvent[]>(`/users/getUsersPastRaces/${user.id}?start=0&limit=30`);
 }
