@@ -3,5 +3,5 @@
 
 node "$(dirname "$0")/delete-docs.js"
 npm run build
-git add .
-git commit -m "Transpile" --no-verify
+# git add .
+# git commit -m "Transpile" --no-verify
